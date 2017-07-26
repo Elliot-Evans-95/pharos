@@ -1,0 +1,20 @@
+{
+  "name": "pharos",
+  "version": "0.0.1",
+  "description": "Run multiple sites in lighthouse",
+  "main": "pharos.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elliot-evans-95/pharos.git"
+  },
+  "bin": {
+    "pharos": "options.js"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "commander": "^2.11.0",
+    "lighthouse": "^2.2.1",
+    "node-cmd": "^3.0.0"
+  }
+}
