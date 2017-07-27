@@ -1,8 +1,8 @@
 {
   "name": "lighthouse-pharos",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "bin": {
-    "testing123": "list.js"
+    "pharos": "list.js"
   },
   "dependencies": {
     "async": "^2.5.0",
