@@ -3,41 +3,42 @@
 const cmd = require('node-cmd');
 const async = require('async');
 
-console.log('yo');
-
 module.exports = run;
 
 function run(options) {
-    console.log('SITES:', options.args);
 
     if (options.args.length === 0 || options.args.length === null || options.args.length === undefined) {
-        throw 'ops';
+        throw "You must pass in a Site URL";
     }
 
-    for(var i = 0; i < options.args.length; i++) {
-        var formattedSites = splitArray(options.args[i]);
+    for(let i = 0; i < options.args.length; i++) {
+        let formattedSites = splitArray(options.args[i]);
 
         async.parallel([
             function () {
-                console.log('RUN:', formattedSites);
                 cmd.get(
                     `lighthouse ${formattedSites} --quiet`,
-                    function(err, data){
-                        if (!err) {
-                            console.log('WORKING')
-                        } else {
-                            console.log('error', err)
+                    function(error){
+                        if (error) {
+                            throw new RunLighthouseException(error);
                         }
-
                     }
                 )
             }
-        ], function ( error) {
-            throw error;
+        ], function (error) {
+            throw new RunLighthouseException(error);
         });
     }
 }
 
 function splitArray (site) {
     return site.replace(",", "");
+}
+
+function RunLighthouseException(error) {
+    this.error = error;
+    this.message = 'Something went wrong when running Lighthouse:';
+    this.toString = function() {
+        return this.message + this.error;
+    };
 }
