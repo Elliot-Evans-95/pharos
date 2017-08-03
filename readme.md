@@ -26,7 +26,7 @@ yarn add lighthouse-pharos
 Call Pharos with the urls you want with or without a separating comma.
 
 ```
-Pharos https://www.exampleurl.com, https://www.anotherone.co.uk
+pharos https://airhorner.com/, https://www.pokedex.org/
 ```
 
 ### Note

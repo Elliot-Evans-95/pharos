@@ -24,7 +24,7 @@
     "metrics",
     "pharos"
   ],
-  "dependencies": {
+  "devDependencies": {
     "async": "^2.5.0",
     "commander": "^2.11.0",
     "node-cmd": "^3.0.0",
