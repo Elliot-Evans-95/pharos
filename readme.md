@@ -23,10 +23,12 @@ yarn add lighthouse-pharos
 
 ## Usage
 
-Call Pharos with the urls you want with or without a separating comma.
+Call Pharos with the urls you want with a separating comma.
+You can specify what ouput you would like; HTML or JSON.
+Pharos will save your output file according to the sites name.
 
 ```
-pharos https://airhorner.com/, https://www.pokedex.org/
+pharos --sites https://airhorner.com/,https://www.pokedex.org/ --output json
 ```
 
 ### Note
