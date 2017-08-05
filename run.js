@@ -37,7 +37,7 @@ function anotherOne(output, sites) {
         async.parallel([
             function () {
                 cmd.get(
-                    `lighthouse ${formattedSites} --quiet --output=${output} --output-path=${outputName}.${output}`,
+                    `lighthouse ${formattedSites} --quiet --output=${output} --output-path=${outputName}.${output} --chrome-flags="--headless"`,
                     function(error){
                         if (error) {
                             throw new RunLighthouseException(error);
