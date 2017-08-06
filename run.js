@@ -12,7 +12,8 @@ function createSitesArray(sites) {
 function runLighthouse(userOptions) {
 
     if (userOptions.sites === null || userOptions.sites === undefined) {
-        throw "You must pass in a Site URL";
+        console.error("You must pass in a Site URL");
+        process.exit(1);
     }
 
     let siteArray = createSitesArray(userOptions.sites);
@@ -25,7 +26,8 @@ function splitArray (site) {
 }
 
 function RunLighthouseException(error) {
-    throw `Something went wrong when running Lighthouse: ${error}`;
+    console.error(`Something went wrong when running Lighthouse: ${error}`);
+    process.exit(1);
 }
 
 function anotherOne(output, sites) {
