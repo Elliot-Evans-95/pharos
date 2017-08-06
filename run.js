@@ -2,6 +2,7 @@
 
 const cmd = require('node-cmd');
 const async = require('async');
+const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 module.exports = executeLighthouse;
 
@@ -28,7 +29,7 @@ function RunLighthouseException(error) {
 function runCustomLighthouse(output, sites) {
     for(let i = 0; i < sites.length; i++) {
         let _formattedSites = sites[i];
-        let _outputName = formattedSites.replace(/\//g, '');
+        let _outputName = _formattedSites.replace(/\//g, '');
 
         async.parallel([
             function () {
@@ -38,6 +39,7 @@ function runCustomLighthouse(output, sites) {
                         if (error) {
                             throw new RunLighthouseException(error);
                         }
+                        //slackChannelLighthouseResult(_formattedSites, _outputName, output)
                     }
                 )
             }
@@ -45,4 +47,31 @@ function runCustomLighthouse(output, sites) {
             throw new RunLighthouseException(error);
         });
     }
+}
+
+function slackChannelLighthouseResult(site, fileName, outputType) {
+    const _currentTime = Date.now();
+    const _request = new XMLHttpRequest();
+    let _url = "https://hooks.slack.com/services/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";
+
+    // if(outputType === 'html') {
+    //     let siteResult = getHtmlResult(fileName);
+    // } else {
+    //     let siteResult = getJsonResult(fileName);
+    // }
+
+    let siteResult = '30';
+    let _data = JSON.stringify({"text": `Date: ${_currentTime} \n URL: ${site} \n Result: ${siteResult}`});
+
+    _request.open('POST', _url, true);
+    _request.setRequestHeader('Content-Type', 'application/json');
+    _request.send(_data);
+}
+
+function getHtmlResult() {
+    return '80';
+}
+
+function getJsonResult() {
+    return '90';
 }
