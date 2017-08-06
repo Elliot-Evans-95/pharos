@@ -21,7 +21,6 @@ function runLighthouse(userOptions) {
 }
 
 function splitArray (site) {
-    console.log('Sites:', site);
     return site.replace(",", "");
 }
 
@@ -34,7 +33,6 @@ function anotherOne(output, sites) {
     for(let i = 0; i < sites.length; i++) {
         let formattedSites = sites[i];
         let outputName = formattedSites.replace(/\//g, '');
-        console.log('outputName', outputName);
 
         async.parallel([
             function () {
