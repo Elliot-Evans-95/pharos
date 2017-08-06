@@ -3,13 +3,13 @@
 const cmd = require('node-cmd');
 const async = require('async');
 
-module.exports = runLighthouse;
+module.exports = executeLighthouse;
 
 function createSitesArray(sites) {
     return sites.split(',');
 }
 
-function runLighthouse(userOptions) {
+function executeLighthouse(userOptions) {
 
     if (userOptions.sites === null || userOptions.sites === undefined) {
         console.error("You must pass in a Site URL");
@@ -17,7 +17,7 @@ function runLighthouse(userOptions) {
     }
 
     let siteArray = createSitesArray(userOptions.sites);
-    anotherOne(userOptions.output, siteArray);
+    runCustomLighthouse(userOptions.output, siteArray);
 }
 
 function RunLighthouseException(error) {
@@ -25,15 +25,15 @@ function RunLighthouseException(error) {
     process.exit(1);
 }
 
-function anotherOne(output, sites) {
+function runCustomLighthouse(output, sites) {
     for(let i = 0; i < sites.length; i++) {
-        let formattedSites = sites[i];
-        let outputName = formattedSites.replace(/\//g, '');
+        let _formattedSites = sites[i];
+        let _outputName = formattedSites.replace(/\//g, '');
 
         async.parallel([
             function () {
                 cmd.get(
-                    `lighthouse ${formattedSites} --quiet --output=${output} --output-path=${outputName}.${output} --chrome-flags="--headless"`,
+                    `lighthouse ${_formattedSites} --quiet --output=${output} --output-path=${_outputName}.${output} --chrome-flags="--headless"`,
                     function(error){
                         if (error) {
                             throw new RunLighthouseException(error);

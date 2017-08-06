@@ -11,4 +11,4 @@ program
     .option('-out, --output <output>', 'To determine what type of output you would like')
     .parse(process.argv);
 
-runLighthouse(program);
+executeLighthouse(program);
