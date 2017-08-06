@@ -20,10 +20,6 @@ function runLighthouse(userOptions) {
     anotherOne(userOptions.output, siteArray);
 }
 
-function splitArray (site) {
-    return site.replace(",", "");
-}
-
 function RunLighthouseException(error) {
     console.error(`Something went wrong when running Lighthouse: ${error}`);
     process.exit(1);
