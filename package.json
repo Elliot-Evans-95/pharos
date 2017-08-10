@@ -1,6 +1,6 @@
 {
   "name": "lighthouse-pharos",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "main": "run.js",
   "bin": {
     "pharos": "list.js"
@@ -25,12 +25,9 @@
     "pharos"
   ],
   "dependencies": {
-    "lighthouse": "^2.3.0"
-  },
-  "devDependencies": {
+    "lighthouse": "^2.3.0",
     "async": "^2.5.0",
     "commander": "^2.11.0",
-    "node-cmd": "^3.0.0",
-    "xmlhttprequest": "^1.8.0"
+    "node-cmd": "^3.0.0"
   }
 }
