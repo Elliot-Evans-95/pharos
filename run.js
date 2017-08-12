@@ -2,6 +2,7 @@
 
 const cmd = require('node-cmd');
 const async = require('async');
+const quaggy = require('lighthouse-quaggy');
 
 module.exports = executeLighthouse;
 
@@ -38,7 +39,7 @@ function runCustomLighthouse(output, sites) {
                         if (error) {
                             throw new RunLighthouseException(error);
                         }
-                        //slackChannelLighthouseResult(_formattedSites, _outputName, output)
+                        quaggy(_formattedSites, _outputName, output);
                     }
                 )
             }

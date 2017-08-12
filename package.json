@@ -26,6 +26,7 @@
   ],
   "dependencies": {
     "lighthouse": "^2.3.0",
+    "lighthouse-quaggy": "^0.0.4",
     "async": "^2.5.0",
     "commander": "^2.11.0",
     "node-cmd": "^3.0.0"
