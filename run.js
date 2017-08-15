@@ -2,7 +2,6 @@
 
 const cmd = require('node-cmd');
 const async = require('async');
-const quaggy = require('lighthouse-quaggy');
 
 module.exports = executeLighthouse;
 
@@ -30,16 +29,17 @@ function runCustomLighthouse(output, sites) {
     for(let i = 0; i < sites.length; i++) {
         let _formattedSites = sites[i];
         let _outputName = _formattedSites.replace(/\//g, '');
+        let _outputFile = `${_outputName}.${output}`;
 
         async.parallel([
             function () {
                 cmd.get(
-                    `lighthouse ${_formattedSites} --quiet --output=${output} --output-path=${_outputName}.${output} --chrome-flags="--headless"`,
+                    `lighthouse ${_formattedSites} --quiet --output=${output} --output-path=${_outputFile} --chrome-flags="--headless"`,
                     function(error){
                         if (error) {
                             throw new RunLighthouseException(error);
                         }
-                        quaggy(_formattedSites, _outputName, output);
+                        require('lighthouse-quaggy')(_formattedSites, _outputFile);
                     }
                 )
             }
