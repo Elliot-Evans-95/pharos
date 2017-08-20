@@ -11,7 +11,7 @@ You must have lighthouse installed either locally or globally for this package t
 To install Pharos using NPM:
 
 ```
-npm  i lighthouse-pharos
+npm i lighthouse-pharos
 ```
 
 To install Pharos using Yarn:
@@ -22,18 +22,23 @@ yarn add lighthouse-pharos
 
 ## Usage
 
-Call Pharos with the urls you want with a separating comma.
-You can specify what output you would like; HTML or JSON.
-Lighthouse will always run in headless chrome.
-Pharos will save your output file according to the sites name.
-Pharos will then look for the slack webhook in `.slackChannel`.
-Then it will slack your channel with the response.
+You can use Pharos by passing in the urls you want to test:
 
+```
+pharos --sites https://airhorner.com/,https://www.pokedex.org/
+```
+
+If you would like the output files to be in JSON then add the output flag:
 ```
 pharos --sites https://airhorner.com/,https://www.pokedex.org/ --output json
 ```
 
-### Note
+If you have a slack channel that you would like Lighthouse to post results too then add the channel's webhook
+in `.slackChannel`.
 
-This project will be regularly updated until version 1.0.0 release.
-From version 1.0.0 stable release, there will be no breaking changes.
+NOTE: If possible Pharos will always run in a headless Chrome.
+
+### Just to add..
+
+This project is under active development, expect changes
+From version v3.2 the core of the project will not change only minor differences.
