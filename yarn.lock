@@ -425,15 +425,15 @@ lighthouse-logger@^1.0.0:
   dependencies:
     debug "^2.6.8"
 
-lighthouse-quaggy@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/lighthouse-quaggy/-/lighthouse-quaggy-0.1.0.tgz#160340e5046c4e1149574d882f6a232650252dc6"
+lighthouse-quaggy@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/lighthouse-quaggy/-/lighthouse-quaggy-0.2.1.tgz#3c3a7e4ea8bfad371345273cff08d77c3e291632"
   dependencies:
     xmlhttprequest "^1.8.0"
 
-lighthouse@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-2.3.0.tgz#1b951eb7107dae98b5cbe11edd5eefa795218f06"
+"lighthouse@https://github.com/GoogleChrome/lighthouse.git":
+  version "2.4.0"
+  resolved "https://github.com/GoogleChrome/lighthouse.git#5bf4a0f0f02fadf7ce9fe0cc3e6680e8c317c404"
   dependencies:
     axe-core "2.2.1"
     chrome-devtools-frontend "1.0.422034"
@@ -441,7 +441,7 @@ lighthouse@^2.3.0:
     jpeg-js "0.1.2"
     json-stringify-safe "5.0.1"
     lighthouse-logger "^1.0.0"
-    metaviewport-parser "0.0.1"
+    metaviewport-parser "0.1.0"
     mkdirp "0.5.1"
     opn "4.0.2"
     rimraf "^2.6.1"
@@ -508,9 +508,9 @@ meow@^3.7.0:
     redent "^1.0.0"
     trim-newlines "^1.0.0"
 
-metaviewport-parser@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/metaviewport-parser/-/metaviewport-parser-0.0.1.tgz#9b28179659b76ff9d21de84ae25583257909b206"
+metaviewport-parser@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/metaviewport-parser/-/metaviewport-parser-0.1.0.tgz#97fa67ea4bbf640f4fd59010f88f10cea7d5accc"
 
 minimatch@^3.0.4:
   version "3.0.4"

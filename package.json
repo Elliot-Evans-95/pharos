@@ -1,6 +1,6 @@
 {
   "name": "lighthouse-pharos",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "main": "run.js",
   "bin": {
     "pharos": "list.js"
@@ -25,10 +25,10 @@
     "pharos"
   ],
   "dependencies": {
-    "lighthouse": "^2.4.0",
-    "lighthouse-quaggy": "^0.2.0",
     "async": "^2.5.0",
     "commander": "^2.11.0",
+    "lighthouse": "https://github.com/GoogleChrome/lighthouse.git",
+    "lighthouse-quaggy": "^0.2.0",
     "node-cmd": "^3.0.0"
   }
 }
