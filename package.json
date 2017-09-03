@@ -5,6 +5,9 @@
   "bin": {
     "pharos": "list.js"
   },
+  "scripts": {
+    "build": "taskr build"
+  },
   "author": "Elliot Evans",
   "license": "MIT",
   "bugs": {
@@ -27,8 +30,16 @@
   "dependencies": {
     "async": "^2.5.0",
     "commander": "^2.11.0",
-    "lighthouse": "https://github.com/GoogleChrome/lighthouse.git",
+    "lighthouse": "git+https://github.com/GoogleChrome/lighthouse.git",
     "lighthouse-quaggy": "^0.2.0",
     "node-cmd": "^3.0.0"
+  },
+  "devDependencies": {
+    "@taskr/babel": "^1.1.0",
+    "@taskr/clear": "^1.1.0",
+    "@taskr/concat": "^1.1.0",
+    "@taskr/uglify": "^1.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "taskr": "^1.1.0"
   }
 }
