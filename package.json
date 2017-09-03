@@ -27,6 +27,11 @@
     "metrics",
     "pharos"
   ],
+  "files": [
+    "dist/",
+    "node_modules/",
+    "package-lock.json"
+  ],
   "dependencies": {
     "async": "^2.5.0",
     "commander": "^2.11.0",
