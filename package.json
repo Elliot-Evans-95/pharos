@@ -3,7 +3,7 @@
   "version": "0.3.4",
   "main": "run.js",
   "bin": {
-    "pharos": "list.js"
+    "pharos": "dist/all.js"
   },
   "scripts": {
     "test": "jest",

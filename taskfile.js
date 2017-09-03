@@ -13,7 +13,6 @@ module.exports = {
                     join_vars: true
                 }
             })
-            .concat({ output:'all.js', map:true })
             .target('dist')
     },
     *build(task) {
