@@ -1,4 +1,4 @@
-# Pharos
+# Pharos        ![Travis build status](https://travis-ci.org/Elliot-Evans-95/pharos.svg?branch=master)
 
 Run Multiple Versions of Lighthouse on Windows / Mac OS / Linux
 
