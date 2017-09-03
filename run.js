@@ -26,6 +26,10 @@ function RunLighthouseException(error) {
 }
 
 function runCustomLighthouse(output, sites) {
+    if(output === null || output === undefined) {
+        output = "html";
+    }
+
     for(let i = 0; i < sites.length; i++) {
         let _formattedSites = sites[i];
         let _outputName = _formattedSites.replace(/\//g, '');
