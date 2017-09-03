@@ -1,6 +1,6 @@
 {
   "name": "lighthouse-pharos",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "main": "run.js",
   "bin": {
     "pharos": "dist/all.js"

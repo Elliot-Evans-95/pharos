@@ -28,7 +28,7 @@ You can use Pharos by passing in the urls you want to test:
 pharos --sites https://airhorner.com/,https://www.pokedex.org/
 ```
 
-If you would like the output files to be in JSON then add the output flag:
+If you would like the output files to be in JSON then add the output flag, by default it outputs HTML:
 ```
 pharos --sites https://airhorner.com/,https://www.pokedex.org/ --output json
 ```
