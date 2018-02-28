@@ -39,7 +39,7 @@ function runCustomLighthouse(output, sites) {
                         if (error) {
                             throw new RunLighthouseException(error);
                         }
-                        require('lighthouse-quaggy')(_formattedSites, _outputFile);
+                        // require('lighthouse-quaggy')(_formattedSites, _outputFile);
                     }
                 )
             }

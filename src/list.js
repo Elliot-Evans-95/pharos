@@ -3,7 +3,7 @@
 
 const program = require('commander');
 const executeLighthouse = require('./run');
-const projectVersion = require('./package.json').version;
+const projectVersion = require('./../package.json').version;
 
 program
     .version(projectVersion)

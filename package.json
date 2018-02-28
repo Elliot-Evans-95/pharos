@@ -1,9 +1,9 @@
 {
   "name": "lighthouse-pharos",
-  "version": "0.4.0",
-  "main": "run.js",
+  "version": "0.4.1",
+  "main": "src/run.js",
   "bin": {
-    "pharos": "dist/all.js"
+    "pharos": "src/list.js"
   },
   "scripts": {
     "test": "jest",
@@ -34,10 +34,10 @@
     "package-lock.json"
   ],
   "dependencies": {
-    "async": "^2.5.0",
-    "commander": "^2.11.0",
-    "lighthouse": "git+https://github.com/GoogleChrome/lighthouse.git",
-    "lighthouse-quaggy": "^0.2.0",
+    "async": "^2.6.0",
+    "commander": "^2.14.1",
+    "lighthouse": "^2.9.1",
+    "lighthouse-quaggy": "^0.2.2",
     "node-cmd": "^3.0.0"
   },
   "devDependencies": {
@@ -45,9 +45,9 @@
     "@taskr/clear": "^1.1.0",
     "@taskr/concat": "^1.1.0",
     "@taskr/uglify": "^1.1.0",
-    "@types/jest": "^20.0.8",
+    "@types/jest": "^22.1.3",
     "babel-preset-es2015": "^6.24.1",
-    "jest": "^20.0.4",
+    "jest": "^22.4.2",
     "taskr": "^1.1.0"
   }
 }
