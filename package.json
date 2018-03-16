@@ -1,6 +1,6 @@
 {
   "name": "lighthouse-pharos",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "main": "run.js",
   "bin": {
     "pharos": "list.js"
@@ -28,7 +28,7 @@
     "async": "^2.6.0",
     "commander": "^2.15.0",
     "lighthouse": "^2.9.2",
-    "lighthouse-quaggy": "^0.2.4",
+    "lighthouse-quaggy": "^0.2.5",
     "node-cmd": "^3.0.0"
   }
 }
