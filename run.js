@@ -2,7 +2,6 @@
 
 const cmd = require('node-cmd');
 const async = require('async');
-const dateTime = require('date-time');
 
 module.exports = executeLighthouse;
 
@@ -28,10 +27,9 @@ function RunLighthouseException(error) {
 
 function runCustomLighthouse(output, sites) {
     for(let i = 0; i < sites.length; i++) {
-        let _date = dateTime({local: false}.replace(/\s+/g, '_');
         let _formattedSites = sites[i];
         let _outputName = _formattedSites.replace(/[^\w\s]/gi, '');
-        let _outputFile = `${_outputName}_${_date}.LH.${output}`;
+        let _outputFile = `${_outputName}.LH.${output}`;
 
         async.parallel([
             function () {
