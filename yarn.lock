@@ -544,9 +544,9 @@ lighthouse-logger@^1.0.0:
   dependencies:
     debug "^2.6.8"
 
-lighthouse-quaggy@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/lighthouse-quaggy/-/lighthouse-quaggy-0.2.2.tgz#79fccfe86924aeebc10a3e5abb3931c1edf4eaa9"
+lighthouse-quaggy@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/lighthouse-quaggy/-/lighthouse-quaggy-0.2.5.tgz#971a36148ce3661a02e4690a17c870ccf574c454"
   dependencies:
     xmlhttprequest "^1.8.0"
 
