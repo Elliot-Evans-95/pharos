@@ -1,13 +1,9 @@
 {
   "name": "lighthouse-pharos",
-  "version": "0.4.2",
-  "main": "src/run.js",
+  "version": "0.4.4",
+  "main": "run.js",
   "bin": {
-    "pharos": "src/list.js"
-  },
-  "scripts": {
-    "test": "jest",
-    "build": "taskr build"
+    "pharos": "list.js"
   },
   "author": "Elliot Evans",
   "license": "MIT",
@@ -28,16 +24,11 @@
     "metrics",
     "pharos"
   ],
-  "files": [
-    "dist/",
-    "node_modules/",
-    "package-lock.json"
-  ],
   "dependencies": {
     "async": "^2.6.0",
     "commander": "^2.15.0",
     "lighthouse": "^2.9.2",
-    "lighthouse-quaggy": "^0.2.2",
+    "lighthouse-quaggy": "^0.2.4",
     "node-cmd": "^3.0.0"
   }
 }

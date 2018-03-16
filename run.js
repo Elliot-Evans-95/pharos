@@ -39,7 +39,7 @@ function runCustomLighthouse(output, sites) {
                         if (error) {
                             throw new RunLighthouseException(error);
                         }
-                        require('./../node_modules/lighthouse-quaggy/dist/slackChannel')(_formattedSites, _outputFile);
+                        require('lighthouse-quaggy/dist/slackChannel')(_formattedSites, _outputFile);
                     }
                 )
             }
