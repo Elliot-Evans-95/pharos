@@ -28,8 +28,8 @@ function RunLighthouseException(error) {
 function runCustomLighthouse(output, sites) {
     for(let i = 0; i < sites.length; i++) {
         let _formattedSites = sites[i];
-        let _outputName = _formattedSites.replace(/\//g, '');
-        let _outputFile = `${_outputName}.${output}`;
+        let _outputName = _formattedSites.replace(/[^\w\s]/gi, '');
+        let _outputFile = `${_outputName}_LH.${output}`;
 
         async.parallel([
             function () {
